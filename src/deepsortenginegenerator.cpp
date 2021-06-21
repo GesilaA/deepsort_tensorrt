@@ -1,3 +1,5 @@
+#define _DLL_EXPORTS
+
 #include "deepsortenginegenerator.h"
 #include "assert.h"
 #include <memory.h> 
