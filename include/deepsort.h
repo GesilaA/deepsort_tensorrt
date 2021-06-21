@@ -1,5 +1,11 @@
-#ifndef DEEPSORT_H
-#define DEEPSORT_H
+//#ifndef DEEPSORT_H
+//#define DEEPSORT_H
+
+#ifdef _DLL_EXPORTS
+#define DLL_API _declspec(dllexport)
+#else
+#define DLL_API _declspec(dllimport)
+#endif
 
 #include <iostream>
 #include <opencv2/opencv.hpp>
@@ -11,7 +17,7 @@
 using std::vector;
 using nvinfer1::ILogger;
 
-class DeepSort {
+class DLL_API DeepSort {
 public:    
     DeepSort(std::string modelPath, int batchSize, int featureDim, int gpuID, ILogger* gLogger);
     ~DeepSort();
@@ -45,4 +51,4 @@ private:
     int gpuID;
 };
 
-#endif  //deepsort.h
+//#endif  //deepsort.h
