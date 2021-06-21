@@ -1,3 +1,5 @@
+#define _DLL_EXPORTS
+
 #include "deepsort.h"
 
 DeepSort::DeepSort(std::string modelPath, int batchSize, int featureDim, int gpuID, ILogger* gLogger) {
