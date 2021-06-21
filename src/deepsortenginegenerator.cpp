@@ -49,7 +49,7 @@ void DeepSortEngineGenerator::createEngine(std::string onnxPath, std::string eng
     std::ofstream serializeOutputStream;
     serializeStr.resize(modelStream->size());
     memcpy((void*)serializeStr.data(), modelStream->data(), modelStream->size());
-    serializeOutputStream.open(enginePath);
+    serializeOutputStream.open(enginePath, std::ios::binary);      //add std::ios::binary for windows platform
     serializeOutputStream << serializeStr;
     serializeOutputStream.close();
 }
