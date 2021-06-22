@@ -1,4 +1,5 @@
-注：修改了部分代码，适合win平台，MSVC 2019
+2021.06.22 注：
+修改了部分代码，适合win平台，MSVC 2019
 
 # DeepSort_TensorRT
 TensorRT真是太快啦，基于大佬实现的DeepSort，用TensorRT来做特征提取的部分。[慢更]
