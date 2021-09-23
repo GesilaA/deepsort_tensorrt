@@ -63,7 +63,7 @@ void FeatureTensor::loadEngine(std::string enginePath) {
     // Deserialize model
     runtime = createInferRuntime(*gLogger);
     assert(runtime != nullptr);
-    std::ifstream engineStream(enginePath);
+    std::ifstream engineStream(enginePath, std::ios::binary);
     std::string engineCache("");
     while (engineStream.peek() != EOF) {
         std::stringstream buffer;
